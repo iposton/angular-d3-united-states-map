@@ -223,7 +223,7 @@
                             //console.log(response.data.results[0].votes, ' votes');
                             //self.gettingvotes = false;
                             votes2 = response.data.results[0].votes;
-                            indexDate2 = response.data.results[0].votes[7].date;
+                            indexDate2 = response.data.results[0].votes[0].date;
 
                             // MAKE GROUPS OF VOTES WITH SAME DATE
                             votes2.forEach(function(v2) {
