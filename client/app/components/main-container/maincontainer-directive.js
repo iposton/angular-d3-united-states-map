@@ -121,7 +121,7 @@
                         }
 
                         self.resultsArr.join();
-                        //console.log(self.resultsArr, "results array");
+                        console.log(self.resultsArr, "results array");
                         self.isLoading = false;
                         self.err = false;
 
@@ -155,6 +155,7 @@
                     function onClick(d) {
                         // reset dategroups array
                         dategroups = [];
+                        dategroups2 = [];
                         //console.log(dategroups, "empty dategroups array");
 
                         var pageX = d3.event.pageX;
