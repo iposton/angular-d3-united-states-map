@@ -137,10 +137,10 @@
                 }
 
                 // GET MAP CORDS AND PATHS
-                $http.get('../map-data/paths.json').then(function (data){
-                    uStatePaths = data;
+                $http.get('../map-data/paths.json').then(function (response){
+                    uStatePaths = response;
                 },function (error){
-                    console.log(error, " can't get data");
+                    console.log(error, " can't get data.");
                 });
 
 
