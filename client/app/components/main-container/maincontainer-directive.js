@@ -297,8 +297,8 @@
                     var name1 = (d.first_name) + " " + (d.last_name);
                     var name2 = (d2.first_name) + " " + (d2.last_name);
                     return "<h4>" + n + "</h4>" +
-                        "<div style='display:inline-block; width:auto; padding:10px;'><img style='height:65px; width:60px;' src='../assets/img/senators/" + d.id + ".jpg'/><p>" + (name1) + "(" + d.party + ") Voted " + dgroups[dindex].position + "</p><p> Votes with party " + (d.votes_with_party_pct) + "% </p></div>" +
-                        "<div style='display:inline-block; width:auto; padding:10px;'><img style='height:65px; width:60px;' src='../assets/img/senators/" + d2.id + ".jpg'/><p>" + (name2) + "(" + d2.party + ") Voted " + dgroups2[dindex].position + "</p><p> Votes with party " + (d2.votes_with_party_pct) + "% </p></div>";
+                        "<div><img src='../assets/img/senators/" + d.id + ".jpg'/><p>" + (name1) + "(" + d.party + ") Voted " + dgroups[dindex].position + "</p><p> Votes with party " + (d.votes_with_party_pct) + "% </p></div>" +
+                        "<div><img src='../assets/img/senators/" + d2.id + ".jpg'/><p>" + (name2) + "(" + d2.party + ") Voted " + dgroups2[dindex].position + "</p><p> Votes with party " + (d2.votes_with_party_pct) + "% </p></div>";
                 }
 
                 /* draw states on id #statesvg */

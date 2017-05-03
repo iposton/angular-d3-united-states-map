@@ -9,6 +9,11 @@
     .state:hover{
         fill-opacity:0.5;
     }
+
+    #statesvg {
+        width: 960px; 
+        height: 600px;
+    }
     #tooltip {   
         position: absolute;           
         text-align: center;
@@ -37,19 +42,19 @@
         color:white;
         opacity:0;
     }
-    #tooltip table{
-        table-layout:fixed;
+
+    #tooltip div {
+        display: inline-block; 
+        width: auto; 
+        padding: 10px;
     }
-    #tooltip tr td{
-        padding:0;
-        margin:0;
+
+    #tooltip img {
+        height: 65px; 
+        width: 60px; 
     }
-    #tooltip tr td:nth-child(1){
-        width:50px;
-    }
-    #tooltip tr td:nth-child(2){
-        text-align:center;
-    }
+   
+
 
     h2 {
       text-align: center;
@@ -75,4 +80,16 @@ span.n {
   background: rgba(231, 76, 60, 0.9);
   color: #fff; 
   border-radius: 3px;
+}
+
+@media only screen and (max-width: 700px) {
+     #statesvg {
+        width: 460px; 
+        height: 300px;
+    }
+
+    #tooltip img {
+        height: 35px; 
+        width: 30px; 
+    }
 }

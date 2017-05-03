@@ -3,33 +3,24 @@
     <md-content id="content" flex ng-class="{'repub': vm.selected.party == 'R', 'demo': vm.selected.party == 'D'}">         <content selected="vm.selected" votes="vm.votes" gettingvotes="vm.gettingvotes" votestoday="vm.votestoday"></content>  
     </md-content>
 </div> -->
-
- <h2 ng-if="!dategroups">Click a state to see<br> vote results.</h2>
-        <div ng-repeat="v in dategroups">
-    <h2 ng-if="vm.isLoading && vote_index === $index">{{v.description}}<br> {{v.question}}</h2> 
- </div>
-    <div ng-repeat="r in vm.resultsArr track by $index">
-     <md-button ng-if="!vm.isLoading && vote_index == $index && vm.resultsArr.length > 1" style="float: right" ng-click="next()">Next Vote <span class="yes">{{vote_index + 1}}<span></md-button>
+<h2 ng-if="!dategroups">Click a state to see<br> vote results.</h2>
+<div ng-repeat="v in dategroups">
+    <h2 ng-if="vm.isLoading && vote_index === $index">{{v.description}}<br> {{v.question}}</h2>
+</div>
+<div ng-repeat="r in vm.resultsArr track by $index">
+    <md-button ng-if="!vm.isLoading && vote_index == $index && vm.resultsArr.length > 1" style="float: right" ng-click="next()">Next Vote <span class="yes">{{vote_index + 1}}<span></md-button>
     <h2 ng-if="!vm.isLoading && vote_index === $index">{{r.description}}<br> {{r.question}}</h2>
     <md-card ng-if="!vm.isLoading && vote_index === $index" class="result-card">
     <md-card-content>
    <h4>{{r.result}}</h4>
-   <p>Total Vote: Yes = <span class="y">{{r.total.yes}}</span> No = <span class="n">{{r.total.no}}</span><br>
-   Democrat Vote: Yes = <span class="y">{{r.democratic.yes}}</span> No = <span class="n">{{r.democratic.no}}</span> <br>
-   Republican Vote: Yes = <span class="y">{{r.republican.yes}}</span> No = <span class="n">{{r.republican.no}}</span>  </p>
- </md-card-content>
-    
-    </md-card>
-   
-   </div> 
-   
-       
-
-    <!-- <main-container></main-container> -->
-
-    <div id="tooltip"></div><!-- div to hold tooltip. -->
-    
-      <div class="svg-map">
-        <svg width="960" height="600" id="statesvg"></svg> 
-        </div>
-
+   <p>Total Vote: Yes = <span class="y">{{r.total.yes}}</span> No = <span class="n">{{r.total.no}}</span>
+        <br> Democrat Vote: Yes = <span class="y">{{r.democratic.yes}}</span> No = <span class="n">{{r.democratic.no}}</span>
+        <br> Republican Vote: Yes = <span class="y">{{r.republican.yes}}</span> No = <span class="n">{{r.republican.no}}</span> </p>
+        </md-card-content>
+        </md-card>
+</div>
+<div id="tooltip"></div>
+<!-- div to hold tooltip. -->
+<div class="svg-map">
+    <svg id="statesvg"></svg>
+</div>
