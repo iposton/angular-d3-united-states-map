@@ -36,7 +36,7 @@
                 $http({
                     method: 'get',
                     url: 'https://api.propublica.org/congress/v1/115/senate/members.json',
-                    headers: { 'X-API-KEY': API_KEY }
+                    headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
                 }).then(function(response) {
 
 
@@ -107,7 +107,7 @@
                     $http({
                         method: 'get',
                         url: voteUri,
-                        headers: { 'X-API-KEY': API_KEY }
+                        headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
                     }).then(function(response) {
 
                         self.haveNoVotes = false;
@@ -137,8 +137,12 @@
                 }
 
                 // GET MAP CORDS AND PATHS
-                $http.get('../map-data/paths.json').then(function (response){
-                    uStatePaths = response;
+                 $http({
+                    method: 'get', 
+                    url: 'map-data/paths.json'
+                }).then(function (response) {
+                    //console.log(response, 'res');
+                    uStatePaths = response.data;
                 },function (error){
                     console.log(error, " can't get data.");
                 });
@@ -163,7 +167,7 @@
                         $http({
                             method: 'get',
                             url: 'https://api.propublica.org/congress/v1/members/' + senId + '/votes.json',
-                            headers: { 'X-API-KEY': API_KEY }
+                            headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
                         }).then(function(response) {
                             //console.log(response.data.results[0].votes, ' votes');
                             self.gettingvotes = false;
@@ -213,7 +217,7 @@
                         $http({
                             method: 'get',
                             url: 'https://api.propublica.org/congress/v1/members/' + senId2 + '/votes.json',
-                            headers: { 'X-API-KEY': API_KEY }
+                            headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
                         }).then(function(response) {
                             //console.log(response.data.results[0].votes, ' votes');
                             //self.gettingvotes = false;
