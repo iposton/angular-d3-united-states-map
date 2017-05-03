@@ -36,7 +36,7 @@
                 $http({
                     method: 'get',
                     url: 'https://api.propublica.org/congress/v1/115/senate/members.json',
-                    headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
+                    headers: { 'X-API-KEY': API_KEY }
                 }).then(function(response) {
 
 
@@ -107,7 +107,7 @@
                     $http({
                         method: 'get',
                         url: voteUri,
-                        headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
+                        headers: { 'X-API-KEY': API_KEY }
                     }).then(function(response) {
 
                         self.haveNoVotes = false;
@@ -167,7 +167,7 @@
                         $http({
                             method: 'get',
                             url: 'https://api.propublica.org/congress/v1/members/' + senId + '/votes.json',
-                            headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
+                            headers: { 'X-API-KEY': API_KEY }
                         }).then(function(response) {
                             //console.log(response.data.results[0].votes, ' votes');
                             self.gettingvotes = false;
@@ -217,7 +217,7 @@
                         $http({
                             method: 'get',
                             url: 'https://api.propublica.org/congress/v1/members/' + senId2 + '/votes.json',
-                            headers: { 'X-API-KEY': 'kC7oetzF3v27EP36JD40ZaVqWCDCoJua8IcLDoa9' }
+                            headers: { 'X-API-KEY': API_KEY }
                         }).then(function(response) {
                             //console.log(response.data.results[0].votes, ' votes');
                             //self.gettingvotes = false;
