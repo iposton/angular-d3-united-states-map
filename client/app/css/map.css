@@ -83,13 +83,21 @@ span.n {
 }
 
 @media only screen and (max-width: 700px) {
-     #statesvg {
-        width: 460px; 
-        height: 300px;
+      #tooltip {   
+        position: absolute;           
+        text-align: center;
+        padding: 2px;             
+        margin: 2px;
+               
     }
 
     #tooltip img {
         height: 35px; 
         width: 30px; 
+    }
+
+     #tooltip p {   
+        font-size: 8px;
+               
     }
 }
