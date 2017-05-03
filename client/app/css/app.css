@@ -1,0 +1,701 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Toolbar area */
+
+.menu {
+    background-color: transparent;
+    border: none;
+    height: 38px;
+    margin: 16px;
+    width: 36px;
+}
+
+md-toolbar h3 {
+    margin: auto;
+    font-weight: 500;
+}
+
+md-toolbar {
+    text-align: center;
+}
+
+
+/* Sidenav area */
+
+md-list-item > button,
+md-list-item > a {
+    width: 100%;
+    text-align: left !important;
+}
+
+md-list .md-button.selected {
+    color: #03a9f4;
+}
+
+md-sidenav md-list {
+    padding: 0 0 8px 0;
+}
+
+.container {
+    height: 92vh;
+}
+
+
+/* Primary content area */
+
+#content {
+    overflow: hidden;
+    /*height: 100%;*/
+}
+
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+#content .md-button.share {
+    /*background-color: transparent;*/
+    border: none;
+    width: 48px;
+    height: 48px;
+    margin: 8px auto 16px 0;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+#content md-icon.avatar {
+    margin-top: 10px;
+}
+
+#content .md-button.share > md-icon {
+    fill: black;
+    width: 36px;
+    height: 36px;
+}
+
+.md-button.menuBtn > md-icon {
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+
+#content .md-button.share:active > md-icon {
+    background-color: #dadada;
+    border-radius: 75%;
+    padding: 4px;
+    transition: all 100ms ease-out 30ms;
+}
+
+#content img {
+    display: block;
+    height: auto;
+    max-width: 500px;
+}
+
+.vote-text {
+    color: #27ae60;
+}
+
+
+/* COMMENT */
+
+.comment {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.md-button.md-send.md-raised:not([disabled]) {
+    color: rgb(255, 255, 255);
+    background-color: #27ae60;
+}
+
+.md-button.md-send.md-raised:not([disabled]):hover {
+    background-color: #218c4e;
+}
+
+
+/* TWEET */
+
+.tweet {
+    float: right;
+}
+
+
+/* Utils */
+
+.content-wrapper {
+    position: relative;
+}
+
+
+/* Typography support coming in 0.8.0 */
+
+md-toolbar h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.avatar {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    /*border: 1px solid #ddd;*/
+    /*border-radius: 50%;*/
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+    vertical-align: middle;
+    zoom: 0.70;
+    transform: translateZ(0);
+    -webkit-transform: scale(0.70);
+    -moz-transform: scale(0.70);
+}
+
+md-bottom-sheet md-icon {
+    margin-right: 20px;
+}
+
+span.name {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 5px;
+}
+
+.avatar svg {
+    /*border-radius: 50%;*/
+}
+
+.md-list md-icon {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+}
+
+
+/*md-bottom-sheet md-icon {
+    margin-right: 20px;
+}
+
+md-icon {
+    margin: auto;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+}*/
+
+.png-icon {
+    margin: 5px auto auto;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat no-repeat;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    padding-left: 10px;
+    cursor: default;
+}
+
+#content a {
+    text-decoration: none;
+    color: #111;
+}
+
+
+/*md-list-item .active {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+*/
+
+md-list-item .active.republican {
+    background-color: rgba(231, 76, 60, 0.8);
+    color: #FFF;
+}
+
+md-list-item .active.democrat {
+    background-color: rgba(52, 152, 219, 0.6);
+    color: #FFF;
+}
+
+md-list-item:hover .republican,
+md-list .md-button:not([disabled]):hover.republican {
+    background-color: rgba(231, 76, 60, 0.8);
+    color: #FFF;
+}
+
+md-list-item:hover .democrat,
+md-list .md-button:not([disabled]):hover.democrat {
+    background-color: rgba(52, 152, 219, 0.6);
+    color: #FFF;
+}
+
+md-list-item .md-focused {
+    background: #fff!important;
+}
+
+md-list:focus {
+    outline: none;
+}
+
+
+/* TOOL TIP STYLE */
+
+.ng-hide {
+    display: none !important;
+}
+
+button {
+    margin-left: 200px
+}
+
+.drop {
+    z-index: 999;
+}
+
+.drop a:hover {
+    opacity: 0.75;
+}
+
+.drop-element.drop-theme-arrows-bounce-dark .drop-content {
+    opacity: 0.75;
+}
+
+
+/* ADMIN */
+
+.admin {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background: #e74c3c;
+    color: #fff;
+    margin: 18px 5px 0 0;
+}
+
+.admin p {
+    font-size: 16px;
+    padding: 0;
+    margin: 5px;
+}
+
+
+/* FORM */
+
+.md-form {
+    margin: 15px 10px 0 10px;
+}
+
+
+/* POPOVER */
+
+.pop-over {
+    color: #fff;
+}
+
+.pop-over a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pop-over span {
+    float: right;
+}
+
+.pop-over h5 {
+    color: #ccc;
+    font-family: 'Roboto';
+}
+
+
+/* COMMENT CSS */
+
+.close-icon {
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+.wrapper {
+    max-height: 200px;
+    overflow: auto;
+}
+
+
+/* Product Hunt */
+
+.ph-image {
+    position: relative;
+    width: 10%;
+    /*border: 1px solid #ddd;*/
+    /*border-radius: 50%;*/
+    display: inline-block!important;
+    overflow: hidden;
+    margin: 0;
+    vertical-align: middle;
+    zoom: 0.70;
+    transform: translateZ(0);
+    -webkit-transform: scale(0.70);
+    -moz-transform: scale(0.70);
+}
+
+.podcast-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+.ph-fab {
+    background-image: url(../assets/img/producthunt.png);
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+    line-height: 56px;
+    min-width: 0;
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    background-clip: padding-box;
+    overflow: hidden;
+    /*position: absolute;
+    top: 0;
+    right: 0;*/
+}
+
+.ph-fab:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/producthunt.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/producthunt.png);
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    opacity: 0;
+}
+
+.ph-fab:not([disabled]):hover:after {
+    opacity: 1;
+}
+
+.demo-menu-example {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    width: 356px;
+    padding-top: 10px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.demo-menu-example h4,
+.demo-menu-example h5 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.demo-menu-item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    padding: 0 16px;
+    position: relative;
+    transition: background 0.15s linear;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.demo-menu-item a {
+    text-decoration: none;
+    color: #111;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.demo-menu-item a:hover {
+    text-decoration: none;
+    color: #444;
+}
+
+#innerContent {
+    padding-left: 0;
+    padding-right: 40px;
+    padding-top: 5px;
+    border-top: 5px solid #ccc;
+    width: 70%;
+    height: auto;
+}
+
+.vote-btn {
+    background: #da552f;
+    border-color: #da552f;
+    color: #fff;
+    fill: #fff;
+    height: 20px;
+    border-radius: 3px;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    outline: 0;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none!important;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+
+/* Podcast feed */
+
+.pc-fab {
+    background-image: url(../assets/img/podcast.png);
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+    line-height: 56px;
+    min-width: 0;
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    background-clip: padding-box;
+    /*overflow: hidden;*/
+    /*position: absolute;
+    top: 0;
+    right: 0;*/
+}
+
+.pc-fab:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/podcast.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/podcast.png);
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    opacity: 0;
+}
+
+.pc-fab:not([disabled]):hover:after {
+    opacity: 0.2;
+}
+
+.pro-fab {
+    background-image: url(../assets/img/propublica.jpg);
+    background-size: 57px 57px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+    line-height: 56px;
+    min-width: 0;
+    width: 56px;
+    height: 56px;
+    vertical-align: middle;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    background-clip: padding-box;
+    /*overflow: hidden;*/
+    /*position: absolute;
+    top: 0;
+    right: 0;*/
+}
+
+.pro-fab:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/propublica.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/img/propublica.jpg);
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    opacity: 0;
+}
+
+.pro-fab:not([disabled]):hover:after {
+    opacity: 0.2;
+}
+
+.votes {
+    width: 100%;
+    padding-top: 10px;
+    max-height: auto;
+    overflow: auto;
+}
+
+
+/*md-card.active {
+    background-color: #ccc;
+    color: #fff;
+}*/
+
+md-card {
+  width: ;
+}
+
+.vote-content {
+    overflow: scroll;
+    height: 415px;
+    position: absolute;
+}
+
+.vote-content md-card {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.vote-content p {
+    text-align: center;
+    font-size: 20px;
+    /*text-shadow: 2px 1px 3px rgba(150, 150, 150, 1);*/
+}
+
+.votes-today {
+    text-align: center;
+    font-size: 20px;
+}
+
+.rep {
+    background: rgba(231, 76, 60, 0.8)!important;
+    color: #FFF!important;
+}
+
+.dem {
+    background: rgba(52, 152, 219, 0.6)!important;
+    color: #FFF!important;
+}
+
+.rep-con {
+    background: rgba(231, 76, 60, 0.8)!important;
+    color: #FFF;
+}
+
+.dem-con {
+    background: rgba(52, 152, 219, 0.6)!important;
+    color: #FFF;
+}
+
+.party-con h2 {
+    margin: 0;
+    padding: 5px;
+}
+
+.party-con h4 {
+    margin: 0;
+    padding: 0 0 5px 5px;
+}
+
+.party-con {
+    width: 35%;
+}
+
+.img-box {
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: 128px!important;
+    /*background-image: -webkit-linear-gradient(rgba(231, 76, 60, 0.6), rgba(231, 76, 60, 0.2))!important;*/
+    /*background-image: linear-gradient(rgba(231, 76, 60, 0.2), rgba(231, 76, 60, 0.2))!important;*/
+}
+
+.vote-content .no {
+    color: rgba(231, 76, 60, 0.9);
+    font-weight: bold;
+}
+
+.vote-content .yes {
+    color: rgba(92, 184, 92, 0.9);
+    font-weight: bold;
+}
+
+/* RESULTS*/
+
+.results {
+  border-top: 2px solid #eee;
+}
+
+.results p {
+  margin: 5px 0 0 0;
+}
+
+.results span.y { 
+  background: rgba(92, 184, 92, 0.9);  
+  color: #fff; 
+  border-radius: 3px;
+}
+
+.results span.n { 
+  background: rgba(231, 76, 60, 0.9);
+  color: #fff; 
+  border-radius: 3px;
+}
+
+
+/* DATEPICKER */
+
+.md-datepicker-input {
+    font-size: 20px;
+}
+
+/* PIE CHART */
+
+canvas {
+  height:80px; 
+  width: 280px;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+      .party-con {
+      width: 100%;
+  }
+}

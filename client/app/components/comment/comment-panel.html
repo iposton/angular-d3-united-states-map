@@ -1,0 +1,25 @@
+<md-toolbar layout="row">
+    <h2 class="md-toolbar-tools">Send a comment</h2><span flex></span>
+    <div class="close-icon">
+        <md-icon md-svg-icon="close" ng-click="vm.closeDialog()"></md-icon>
+    </div>
+</md-toolbar>
+<md-content layout-padding>
+    <form name="commentForm">
+        <!-- Prevent comment textarea from overflow with wrapper -->
+        <div class="wrapper">
+            <div layout="row" layout-sm="column" layout-align="space-around" ng-if="vm.isLoading">
+                <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+            </div>
+            <md-input-container class="md-block" ng-if="!vm.isLoading">
+                <label for="">Comment</label>
+                <textarea type="text" ng-model="vm.mail.comment" md-maxlength="2000" name="comment" rows="4" required></textarea>
+                <div ng-messages="commentForm.comment.$error" ng-if="commentForm.comment.$dirty">
+                    <div ng-message="required" class="my-messages" role="alert">This field is required.</div>
+                    <div ng-message="md-maxlength" class="my-messages" role="alert">Message must not exceed 2000 characters.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <md-button class="md-raised md-button md-ink-ripple md-send" ng-click="vm.sendComment(vm.mail)" ng-disabled="commentForm.$invalid">Send</md-button>
+    </form>
+</md-content>
